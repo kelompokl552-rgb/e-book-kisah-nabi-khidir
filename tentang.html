@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Tentang | E-Book Kisah Nabi Khidir</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --green-dark:#2e7d32;
+  --green:#43a047;
+  --green-soft:#e8f5e9;
+}
+
+body{
+  margin:0;
+  font-family:"Segoe UI", Tahoma, sans-serif;
+  background:var(--green-soft);
+}
+
+/* HEADER */
+header{
+  background:var(--green-dark);
+  color:#fff;
+  padding:25px 20px;
+  text-align:center;
+}
+
+/* CONTENT */
+.container{
+  max-width:800px;
+  margin:60px auto;
+  background:#fff;
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+h2{
+  color:var(--green-dark);
+  margin-top:0;
+}
+
+p{
+  line-height:1.9;
+  font-size:15px;
+  text-align:justify;
+  color:#333;
+}
+
+/* BACK */
+.back{
+  text-align:center;
+  margin:40px 0;
+}
+
+.back a{
+  background:var(--green);
+  color:#fff;
+  text-decoration:none;
+  padding:12px 26px;
+  border-radius:30px;
+  font-weight:600;
+}
+.character {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.character img {
+  width: 90px;
+  cursor: pointer;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.speech {
+  display: none;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  max-width: 220px;
+  font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>ℹ️ Tentang E-Book</h1>
+</header>
+
+<div class="container">
+  <h2>E-Book Kisah Nabi Khidir</h2>
+  <p>
+    E-Book Kisah Nabi Khidir disusun untuk membantu pembaca
+    memahami salah satu kisah paling penuh hikmah dalam Al-Qur’an.
+    Kisah ini mengajarkan tentang kesabaran, keterbatasan ilmu manusia,
+    dan kebijaksanaan Allah dalam setiap ketetapan-Nya.
+  </p>
+
+  <p>
+    Disajikan dalam bentuk naratif dan reflektif,
+    e-book ini diharapkan dapat dinikmati oleh berbagai kalangan,
+    baik pelajar, mahasiswa, maupun masyarakat umum
+    yang ingin memperdalam pemahaman keislaman
+    dengan cara yang ringan dan menyenangkan.
+  </p>
+
+  <p>
+    Setiap bab disusun secara berurutan,
+    dilengkapi dengan penjelasan makna dan relevansi
+    dalam kehidupan sehari-hari,
+    sehingga kisah Nabi Khidir tidak hanya dipahami
+    sebagai cerita masa lalu,
+    tetapi juga sebagai pelajaran hidup sepanjang zaman.
+  </p>
+</div>
+
+<div class="back">
+  <a href="index.html">⬅ Kembali ke Beranda</a>
+</div>
+
+<div class="character" id="character">
+  <img src="character.png" onclick="talk()" />
+  <div class="speech" id="speechBubble"></div>
+</div>
+
+</body>
+</html>
