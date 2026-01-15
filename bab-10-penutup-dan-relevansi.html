@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Bab X – Penutup dan Relevansi | Kisah Nabi Khidir</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  font-family:"Georgia",serif;
+  color:#222;
+}
+.book{
+  max-width:900px;
+  margin:70px auto;
+  background:#fff;
+  padding:90px 80px;
+  border-radius:22px;
+  line-height:2.15;
+  box-shadow:0 35px 110px rgba(0,0,0,.38);
+}
+.chapter-header{text-align:center;margin-bottom:90px}
+.chapter-number{font-size:64px;font-weight:bold;color:#0a4a6e;letter-spacing:6px}
+.chapter-title{font-size:44px;margin-top:10px;color:#0a4a6e}
+p{font-size:19px;margin-bottom:30px;text-align:justify}
+.dropcap::first-letter{float:left;font-size:90px;line-height:1;padding-right:14px;font-weight:bold;color:#0a4a6e}
+.quote{background:#eef6fb;border-left:8px solid #0a4a6e;padding:34px;margin:60px 0;font-style:italic;font-size:18px}
+.divider{height:1px;background:linear-gradient(to right,transparent,#0a4a6e,transparent);margin:90px 0}
+.nav{display:flex;justify-content:space-between;margin-top:110px}
+.nav a{font-size:17px;color:#0a4a6e;font-weight:bold;text-decoration:none}
+.nav a:hover{text-decoration:underline}
+
+.character {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.character img {
+  width: 90px;
+  cursor: pointer;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.speech {
+  display: none;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  max-width: 220px;
+  font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="book">
+
+<div class="chapter-header">
+  <div class="chapter-number">BAB X</div>
+  <div class="chapter-title">Penutup dan Relevansi Kehidupan</div>
+</div>
+
+<p class="dropcap">
+Kisah Nabi Khidir عليه السلام
+bukanlah kisah yang Allah hadirkan
+untuk sekadar diketahui,
+melainkan untuk dihidupi.
+Ia adalah cermin bagi setiap manusia
+yang sedang menempuh perjalanan hidup,
+penuh tanda tanya dan ketidakpastian.
+</p>
+
+<p>
+Melalui perjalanan Nabi Musa,
+Allah mengajarkan bahwa
+bahkan manusia pilihan
+tetap harus belajar bersabar
+dan menahan penilaian.
+Ilmu sejati tidak melahirkan kesombongan,
+melainkan kerendahan hati.
+</p>
+
+<div class="quote">
+“Boleh jadi kamu membenci sesuatu,
+padahal ia baik bagimu.”
+(QS Al-Baqarah: 216)
+</div>
+
+<p>
+Di zaman modern,
+manusia terbiasa menilai segalanya
+berdasarkan hasil instan.
+Kisah Nabi Khidir hadir
+sebagai koreksi lembut:
+bahwa tidak semua kebenaran
+harus segera terlihat.
+</p>
+
+<p>
+Perahu yang rusak,
+anak yang diambil,
+dan tembok yang ditegakkan
+mengajarkan satu prinsip besar:
+Allah selalu bekerja
+untuk kebaikan hamba-Nya,
+meskipun jalannya tidak selalu
+sesuai dengan logika manusia.
+</p>
+
+<div class="divider"></div>
+
+<p>
+Dengan berakhirnya kisah ini,
+berakhir pula perjalanan Nabi Musa
+bersama Nabi Khidir.
+Namun pelajaran dari kisah ini
+tidak pernah berakhir.
+Ia hidup dalam setiap ujian,
+setiap kehilangan,
+dan setiap keputusan hidup manusia.
+</p>
+
+<p>
+Semoga kisah ini
+menjadikan kita hamba-hamba
+yang lebih sabar,
+lebih rendah hati,
+dan lebih yakin
+bahwa di balik setiap ketetapan Allah
+selalu ada hikmah yang sempurna.
+</p>
+
+<div class="nav">
+  <a href="bab-9-penjelasan-hikmah-ilahi.html">← Bab Sebelumnya</a>
+  <a href="cover-belakang.html">Selesai →</a>
+</div>
+
+<div class="character" id="character">
+  <img src="character.png" onclick="talk()" />
+  <div class="speech" id="speechBubble"></div>
+</div>
+
+</div>
+</body>
+</html>
