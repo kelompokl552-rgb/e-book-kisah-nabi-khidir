@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>E-Book Kisah Nabi Khidir</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --green-dark:#2e7d32;
+  --green:#43a047;
+  --green-soft:#e8f5e9;
+}
+
+body{
+  margin:0;
+  font-family:"Segoe UI", Tahoma, sans-serif;
+  background:var(--green-soft);
+}
+
+.hero {
+  width: 100%;
+  height: 220px;
+  background-image: url("img/Bg-Atas.png"); /* ganti dengan gambar kamu */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* efek gelap supaya teks jelas */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.hero-overlay p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* HEADER */
+header{
+  background:var(--green-dark);
+  color:#fff;
+  padding:25px 20px;
+  text-align:center;
+}
+
+header h1{
+  margin:0;
+  font-size:26px;
+}
+
+header p{
+  margin-top:8px;
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* MAIN */
+.main{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:60px;
+  padding:80px 20px;
+  flex-wrap:wrap;
+}
+
+/* COVER IMAGE */
+.cover-wrapper{
+  width:240px;
+  height:340px;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  background:#2e7d32;
+}
+
+.cover-wrapper img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* BUTTONS */
+.menu{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.menu a{
+  background:var(--green);
+  color:#fff;
+  text-decoration:none;
+  padding:14px 28px;
+  border-radius:12px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:.3s;
+  box-shadow:0 6px 15px rgba(0,0,0,.15);
+}
+
+.menu a:hover{
+  background:#388e3c;
+  transform:translateX(6px);
+}
+
+/* NEXT */
+.next{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+}
+
+.next a{
+  background:#fff;
+  border:1px solid #ccc;
+  padding:10px 16px;
+  border-radius:8px;
+  font-size:13px;
+  text-decoration:none;
+  color:#333;
+}
+.character {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.character img {
+  width: 90px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.speech {
+  background: white;
+  color: #333;
+  padding: 12px 16px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  max-width: 220px;
+  font-size: 14px;
+  display: none;
+}
+
+.character {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.character img {
+  width: 90px;
+  cursor: pointer;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.speech {
+  display: none;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  max-width: 220px;
+  font-size: 14px;
+}
+
+.character {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  transition: left 1s ease, bottom 1s ease;
+  z-index: 9999;
+}
+
+.character img {
+  width: 90px;
+  animation: idle 2s infinite ease-in-out;
+}
+
+@keyframes idle {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.speech {
+  display: none;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  font-size: 14px;
+  margin-left: 10px;
+}
+.menu-btn:hover {
+  box-shadow: 0 0 20px rgba(76,175,80,0.6);
+}
+.sparkle {
+  position: fixed;
+  font-size: 18px;
+  animation: sparkle 2.5s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+.s1 { top: 20%; left: 15%; }
+.s2 { top: 35%; right: 20%; animation-delay: 1s; }
+.s3 { bottom: 25%; left: 40%; animation-delay: 2s; }
+
+@keyframes sparkle {
+  0%,100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 1; }
+}
+.leaf {
+  position: fixed;
+  font-size: 22px;
+  animation: floatLeaf 6s infinite linear;
+  opacity: 0.6;
+}
+
+.l1 { top: -10%; left: 20%; }
+.l2 { top: -10%; right: 30%; animation-delay: 3s; }
+
+@keyframes floatLeaf {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(120vh) rotate(360deg); }
+}
+.cloud {
+  position: fixed;
+  top: 80px;
+  left: -60px;
+  font-size: 40px;
+  opacity: 0.5;
+  animation: moveCloud 30s linear infinite;
+}
+
+@keyframes moveCloud {
+  from { left: -60px; }
+  to { left: 110%; }
+}
+.cute-book {
+  position: fixed;
+  bottom: 140px;
+  right: 30px;
+  font-size: 32px;
+  animation: wiggle 2s infinite;
+}
+
+@keyframes wiggle {
+  0%,100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+</style>
+</head>
+
+<body>
+
+  <!--BAKGROUND ATAS-->
+<header class="hero">
+  <div class="hero-overlay">
+    <h1>📘 E-Book Kisah Nabi Khidir</h1>
+    <p>Belajar kisah penuh hikmah dengan cara menyenangkan</p>
+  </div>
+</header>
+
+<section class="main">
+
+  <!-- GAMBAR COVER -->
+  <div class="cover-wrapper">
+    <img src="img/cover depan.png" alt="Cover E-Book Kisah Nabi Khidir">
+  </div>
+
+  <!-- MENU -->
+  <div class="menu">
+    <a href="daftar-isi.html" class="menu-btn target-btn">📚 Daftar Isi</a>
+    <a href="bab-1-pendahuluan.html" class="menu-btn target-btn">▶️ Baca Sekarang</a>
+    <a href="tentang.html" class="menu-btn target-btn">ℹ️ Tentang</a>
+  </div>
+
+  <div class="sparkle s1">✨</div>
+  <div class="sparkle s2">⭐</div>
+  <div class="sparkle s3">✨</div>
+  <div class="leaf l1">🍃</div>
+  <div class="leaf l2">🍃</div>
+  <div class="cloud">☁️</div>
+  <div class="cute-book">📖</div>
+</section>
+
+<div class="character" id="character">
+  <img src="character.png" onclick="talk()" />
+  <div class="speech" id="speechBubble"></div>
+</div>
+
+<div class="character" onclick="talk()">
+  <img src="character.png" alt="Karakter Khidir">
+  <div class="speech" id="speechBubble">
+    Assalamu’alaikum! Klik aku ya 😊
+  </div>
+</div>
+
+<audio id="voice" src="suara1.mp3"></audio>
+
+<script>
+  const character = document.getElementById("character");
+  const buttons = document.querySelectorAll(".target-btn");
+  const messages = [
+    "Assalamu’alaikum! 😊",
+    "Kisah Nabi Khidir penuh hikmah 🌿",
+    "Sabar itu kunci memahami takdir Allah ✨",
+    "Klik 'Baca Sekarang' untuk mulai membaca 📖",
+    "Semoga harimu penuh berkah 🤲"
+  ];
+
+  let index = 0;
+
+  function talk() {
+    const bubble = document.getElementById("speechBubble");
+    const voice = document.getElementById("voice");
+
+    bubble.style.display = "block";
+    bubble.textContent = messages[index];
+
+    voice.currentTime = 0;
+    voice.play();
+
+    index = (index + 1) % messages.length;
+
+    setTimeout(() => {
+      bubble.style.display = "none";
+    }, 4000);
+  }
+
+// 🔹 Ambil posisi terakhir
+const savedPosition = JSON.parse(localStorage.getItem("characterPos"));
+if (savedPosition) {
+  character.style.left = savedPosition.left;
+  character.style.bottom = savedPosition.bottom;
+}
+
+// 🔹 Klik kanan → pindah sisi
+character.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+
+  if (character.style.left === "30px") {
+    character.style.left = "auto";
+    character.style.right = "30px";
+  } else {
+    character.style.right = "auto";
+    character.style.left = "30px";
+  }
+
+  savePosition();
+});
+
+// 🔹 Simpan posisi
+function savePosition() {
+  localStorage.setItem("characterPos", JSON.stringify({
+    left: character.style.left,
+    bottom: character.style.bottom
+  }));
+}
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const rect = btn.getBoundingClientRect();
+
+    // posisi target tombol
+    const targetX = rect.left + rect.width / 2 - 40;
+    const targetY = window.innerHeight - rect.bottom + 20;
+
+    // gerakkan karakter
+    character.style.left = targetX + "px";
+    character.style.bottom = targetY + "px";
+
+    // bicara setelah sampai
+    setTimeout(() => {
+      bubble.style.display = "block";
+      bubble.innerText = "Ayo kita ke sini 📖";
+    }, 900);
+
+    setTimeout(() => {
+      bubble.style.display = "none";
+    }, 3500);
+  });
+});
+</script>
+</body>
+</html>
