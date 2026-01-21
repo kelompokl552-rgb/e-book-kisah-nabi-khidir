@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport">
-  <title>E-Book Kisah Nabi Khidir</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ini krusial untuk mobile -->
+    <title>E-Book Kisah Nabi Khidir</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link ke CSS Anda -->
 
 <style>
 :root{
@@ -314,7 +313,117 @@ header p{
   25% { transform: rotate(5deg); }
   75% { transform: rotate(-5deg); }
 }
+/* Reset dasar untuk konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Body umum */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigasi (misalnya menu) */
+nav {
+    background-color: #34495e;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Agar menu bisa wrap di layar kecil */
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Konten utama (misalnya artikel atau e-book) */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Gambar responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Media Queries untuk Mobile */
+/* Untuk layar kecil (ponsel, <768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+    
+    nav ul {
+        flex-direction: column; /* Menu vertikal di mobile */
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+    
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    /* Jika ada kolom (misalnya sidebar), buat satu kolom */
+    .sidebar {
+        display: none; /* Sembunyikan sidebar di mobile, atau gunakan flex untuk stack */
+    }
+}
+
+/* Untuk layar sedang (tablet, 768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        display: flex;
+        flex-direction: row; /* Jika ada sidebar, tampilkan di samping */
+    }
+    
+    .sidebar {
+        flex: 1;
+        margin-left: 20px;
+    }
+}
 </style>
 </head>
 
@@ -447,6 +556,14 @@ buttons.forEach(btn => {
       bubble.style.display = "none";
     }, 3500);
   });
+});
+
+  // Tambahkan di file JS Anda
+const navToggle = document.querySelector('.nav-toggle'); // Asumsikan ada tombol toggle
+const navMenu = document.querySelector('nav ul');
+
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
 </script>
 </body>
