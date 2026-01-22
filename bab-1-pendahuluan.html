@@ -184,11 +184,39 @@ nav ul {
     width: 70%;
   }
 }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section .card {
+  flex: 1 1 300px; /* responsive card */
+}
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navigation button {
+    font-size: 20px;
+    padding: 14px;
+  }
+}
 
 </style>
 </head>
 
 <body>
+
 <div class="book">
 
 <div class="chapter-header">
@@ -305,8 +333,8 @@ baru saja dimulai.
 </p>
 
 <div class="nav">
-  <a href="index.html">← Cover</a>
-  <a href="bab-2-identitas-nabi-khidir.html">Bab Selanjutnya →</a>
+  <button class="btn-prev" a href="index.html">← Cover</button>
+  <button class="btn-prev" a href="bab-2-identitas-nabi-khidir.html">Bab Selanjutnya →</button>
 </div>
 
 <div class="character" id="character">
@@ -315,6 +343,7 @@ baru saja dimulai.
 </div>
 
 </div>
+
 
 <script>
   <script>
