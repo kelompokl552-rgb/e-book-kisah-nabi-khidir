@@ -451,6 +451,38 @@ yang mampu memetik hikmahnya.
     }
   }
 }
+@media (max-width: 768px) {
+  .speech {
+    animation: popBubble 0.4s ease;
+  }
+
+  @keyframes popBubble {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .character img {
+    animation: floatMobile 3s infinite ease-in-out;
+  }
+
+  @keyframes floatMobile {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+}
+@media (max-width: 768px) {
+  .nav a:active,
+  .mobile-nav a:active {
+    transform: scale(0.95);
+  }
+}
 
 </script>
 </body>
