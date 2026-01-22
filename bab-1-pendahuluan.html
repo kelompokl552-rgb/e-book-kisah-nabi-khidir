@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Bab I – Pendahuluan | Kisah Nabi Khidir</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Bab I – Pendahuluan | Kisah Nabi Khidir</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet">
 
 <style>
@@ -141,6 +141,49 @@ p{
   max-width: 220px;
   font-size: 14px;
 }
+/* Global responsive basics */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* Gambar responsif */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Style default untuk mobile dulu */
+header, nav, .content, footer {
+  padding: 10px;
+}
+
+/* Menu jadi vertikal di mobile */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Media query untuk tablet & desktop */
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+}
 
 </style>
 </head>
@@ -272,5 +315,15 @@ baru saja dimulai.
 </div>
 
 </div>
+
+<script>
+  <script>
+function toggleMenu() {
+  const nav = document.getElementById('menuNav');
+  nav.classList.toggle('hidden');
+}
+</script>
+
+</script>
 </body>
 </html>
