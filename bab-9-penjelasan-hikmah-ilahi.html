@@ -5,33 +5,104 @@
 <title>Bab IX – Penjelasan Hikmah Ilahi | Kisah Nabi Khidir</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+  <style>
 body{
   margin:0;
   background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  font-family:"Georgia",serif;
+  font-family: "Georgia", serif;
   color:#222;
 }
-.book{
-  max-width:900px;
-  margin:70px auto;
-  background:#fff;
-  padding:90px 80px;
-  border-radius:22px;
-  line-height:2.15;
-  box-shadow:0 35px 110px rgba(0,0,0,.38);
-}
-.chapter-header{text-align:center;margin-bottom:90px}
-.chapter-number{font-size:64px;font-weight:bold;color:#0a4a6e;letter-spacing:6px}
-.chapter-title{font-size:44px;margin-top:10px;color:#0a4a6e}
-p{font-size:19px;margin-bottom:30px;text-align:justify}
-.dropcap::first-letter{float:left;font-size:90px;line-height:1;padding-right:14px;font-weight:bold;color:#0a4a6e}
-.quote{background:#eef6fb;border-left:8px solid #0a4a6e;padding:34px;margin:60px 0;font-style:italic;font-size:18px}
-.divider{height:1px;background:linear-gradient(to right,transparent,#0a4a6e,transparent);margin:90px 0}
-.nav{display:flex;justify-content:space-between;margin-top:110px}
-.nav a{font-size:17px;color:#0a4a6e;font-weight:bold;text-decoration:none}
-.nav a:hover{text-decoration:underline}
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.sidebar {
+  flex: 30%;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+/* ===== BUKU ===== */
+.book{
+  max-width: 900px;
+  margin: 70px auto;
+  background: #ffffff;
+  padding: 90px 80px;
+  border-radius: 22px;
+  line-height: 2.15;
+  box-shadow: 0 35px 110px rgba(0,0,0,.38);
+}
+
+.chapter-header{
+  text-align:center;
+  margin-bottom:90px;
+}
+
+.chapter-number{
+  font-size:64px;
+  font-weight:bold;
+  color:#0a4a6e;
+  letter-spacing:6px;
+}
+
+.chapter-title{
+  font-size:44px;
+  margin-top:10px;
+  color:#0a4a6e;
+}
+
+p{
+  font-size:19px;
+  margin-bottom:30px;
+  text-align:justify;
+}
+
+.dropcap::first-letter{
+  float:left;
+  font-size:90px;
+  line-height:1;
+  padding-right:14px;
+  font-weight:bold;
+  color:#0a4a6e;
+}
+
+.quote{
+  background:#eef6fb;
+  border-left:8px solid #0a4a6e;
+  padding:34px;
+  margin:60px 0;
+  font-style:italic;
+  font-size:18px;
+}
+
+.divider{
+  height:1px;
+  background: linear-gradient(to right, transparent, #0a4a6e, transparent);
+  margin:90px 0;
+}
+
+/* ===== NAVIGASI ===== */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  margin-top:110px;
+}
+
+.nav a{
+  font-size:17px;
+  color:#0a4a6e;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.nav a:hover{
+  text-decoration: underline;
+}
+
+/* ===== KARAKTER ===== */
 .character {
   position: fixed;
   bottom: 30px;
@@ -63,7 +134,80 @@ p{font-size:19px;margin-bottom:30px;text-align:justify}
   font-size: 14px;
 }
 
+/* ===================== */
+/* 📱 MODE MOBILE (HP) */
+/* ===================== */
+@media (max-width: 768px) {
+
+  .book{
+    margin: 20px 10px;
+    padding: 35px 22px;
+    border-radius: 16px;
+  }
+
+  .chapter-number{
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+
+  .chapter-title{
+    font-size: 26px;
+  }
+
+  p{
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .dropcap::first-letter{
+    font-size: 56px;
+    padding-right: 10px;
+  }
+
+  .quote{
+    font-size: 15px;
+    padding: 20px;
+    margin: 40px 0;
+  }
+
+  .divider{
+    margin: 50px 0;
+  }
+
+  /* NAV JADI TOMBOL KE BAWAH */
+  .nav{
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .nav a{
+    display: block;
+    padding: 14px;
+    border-radius: 12px;
+    background: #eef6fb;
+    font-size: 18px;
+  }
+
+  /* KARAKTER MOBILE */
+  .character{
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .character img{
+    width: 65px;
+  }
+
+  .speech{
+    font-size: 13px;
+    max-width: 180px;
+  }
+}
 </style>
+
+
 </head>
 
 <body>
@@ -184,5 +328,97 @@ dalam menetapkan sesuatu.
 </div>
 
 </div>
+  <script>
+    /* NAVIGASI MOBILE */
+.mobile-nav {
+  display: none;
+}
+
+/* KHUSUS HP */
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0a4a6e;
+    padding: 10px;
+    justify-content: space-around;
+    z-index: 9998;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.4);
+  }
+
+  .mobile-nav a {
+    color: white;@media (max-width: 768px) {
+  .nav a:active,
+  .mobile-nav a:active {
+    transform: scale(0.95);
+  }
+}
+
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    transition: transform 0.2s ease, background 0.2s;
+  }
+
+  .mobile-nav a:active {
+    transform: scale(0.92);
+    background: rgba(255,255,255,0.3);
+  }
+
+  /* beri ruang agar konten tidak ketutup nav */
+  body {
+    padding-bottom: 90px;
+  }
+}
+@media (max-width: 768px) {
+  .book {
+    animation: mobilePageIn 0.6s ease-out;
+  }
+
+  @keyframes mobilePageIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .character img {
+    animation: floatMobile 3s infinite ease-in-out;
+  }
+
+  @keyframes floatMobile {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+}
+@media (max-width: 768px) {
+  .speech {
+    animation: popBubble 0.4s ease;
+  }
+
+  @keyframes popBubble {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+  </script>
 </body>
 </html>
