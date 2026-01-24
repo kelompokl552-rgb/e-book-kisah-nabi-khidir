@@ -102,38 +102,6 @@ p{
   text-decoration: underline;
 }
 
-/* ===== KARAKTER ===== */
-.character {
-  position: fixed;
-  bottom: 30px;
-  left: 30px;
-  display: flex;
-  align-items: flex-end;
-  gap: 10px;
-  z-index: 9999;
-}
-
-.character img {
-  width: 90px;
-  cursor: pointer;
-  animation: float 2s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.speech {
-  display: none;
-  background: white;
-  padding: 10px 14px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  max-width: 220px;
-  font-size: 14px;
-}
-
 /* ===================== */
 /* 📱 MODE MOBILE (HP) */
 /* ===================== */
@@ -320,11 +288,6 @@ dalam menetapkan sesuatu.
   <a href="bab-8-tembok-anak-yatim.html">← Bab Sebelumnya</a>
   <a href="index.html">🏠Beranda</a>
   <a href="bab-10-penutup-dan-relevansi.html">Bab Selanjutnya →</a>
-</div>
-
-<div class="character" id="character">
-  <img src="character.png" onclick="talk()" />
-  <div class="speech" id="speechBubble"></div>
 </div>
 
 </div>
